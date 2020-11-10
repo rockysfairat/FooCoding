@@ -1,13 +1,29 @@
 #grid-floats {
-    display: inline-block;
+    border: pink 3px dotted;
+    width: 1400px;
+    height: auto;
+    margin: auto;
+    text-align: justify;
+}
+
+#grid-floats:after {
+    content: "";
+    display: block;
+    clear: both;
+    padding: auto;
 }
 
 #grid-floats > .grid-item {
+    float: left;
     border: 3px green dashed;
-    width: 300px;
-    height: 500px;
+    width: 250px;
+    height: 400px;
     margin: 10px;
     padding: 20px;
+    list-style-type: none;
+    float: inline-start;
+    left: 3%;
+    position: relative;
 }
 
 img {
@@ -16,14 +32,20 @@ img {
 }
 
 #grid-flex {
+    border: pink 3px dotted;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
+    padding: 0px;
+    text-align: justify;
 }
 
 #grid-flex > .grid-item {    /* flex-shrink into :nth-child */
     border: 3px dotted red;
     margin: 10px;
-    width: 300px;
+    width: 250px;
     height: 500px;
+    margin: 10px;
+    padding: 20px;
+    list-style-type: none;
 }
