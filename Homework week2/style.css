@@ -44,8 +44,9 @@ img {
     height: auto;
 }
 
-img:nth-child(1) {
-    width: 100px;
+.grid-item:nth-child(1)  > img {
+    width: 70%;
+    border: blue solid 1px;
 }
 
 #grid-flex {
