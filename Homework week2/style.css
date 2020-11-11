@@ -1,5 +1,11 @@
+body {
+    background-color: #ffde0f;
+}
+
+@media screen and (min-width: 701px) {
+
 #grid-floats {
-    border: pink 3px dotted;
+    border: blue 3px dotted;
     width: 1400px;
     height: auto;
     margin: auto;
@@ -24,6 +30,13 @@
     float: inline-start;
     left: 3%;
     position: relative;
+    background-color: #ffffff;
+}
+
+#grid-floats > .grid-item:nth-child(1) {
+    border: dashed red 2px;
+    width: 565px;
+    height: 400px;
 }
 
 img {
@@ -31,8 +44,12 @@ img {
     height: auto;
 }
 
+img:nth-child(1) {
+    width: 100px;
+}
+
 #grid-flex {
-    border: pink 3px dotted;
+    border: blueviolet 3px dotted;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -48,4 +65,239 @@ img {
     margin: 10px;
     padding: 20px;
     list-style-type: none;
+    background-color: #ffffff;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+    animation-name: sha;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sha {
+    0% {text-shadow: 2px -10px #0a1df2;}
+    5% {text-shadow: 2px -8px #37d925;}
+    10% {text-shadow: 2px -6px #ed323e;}
+    15% {text-shadow: 2px -4px #0a1df2;}
+    20% {text-shadow: 2px -2px #37d925;}
+    25% {text-shadow: 2px 0px #ed323e;}
+    30% {text-shadow: 2px 2px #0a1df2;}
+    35% {text-shadow: 2px 4px #37d925;}
+    40% {text-shadow: 2px 6px #ed323e;}
+    45% {text-shadow: 2px 8px #0a1df2;}
+    50% {text-shadow: 2px 10px #37d925;}
+    55% {text-shadow: 2px 8px #ed323e;}
+    60% {text-shadow: 2px 6px #0a1df2;}
+    65% {text-shadow: 2px 4px #37d925;}
+    70% {text-shadow: 2px 2px #ed323e;}
+    75% {text-shadow: 2px 0px #0a1df2;}
+    80% {text-shadow: 2px -2px #37d925;}
+    85% {text-shadow: 2px -4px #ed323e;}
+    90% {text-shadow: 2px -6px #0a1df2;}
+    95% {text-shadow: 2px -8px #37d925;}
+    100% {text-shadow: 2px -10px #ed323e;}
+}
+
+}
+
+media screen and (min.width: 401px) and (max-width: 700px) {
+    
+    #grid-floats {
+        border: blue 3px dotted;
+        width: 700px;
+        height: auto;
+        text-align: justify;
+    }
+    
+    #grid-floats:after {
+        content: "";
+        display: block;
+        clear: both;
+        padding: auto;
+    }
+    
+    #grid-floats > .grid-item {
+        float: left;
+        border: 3px green dashed;
+        width: 160px;
+        height: 400px;
+        margin: 10px;
+        padding: 0px 10px 0px 10px;
+        list-style-type: none;
+        float: inline-start;
+        /* left: 3%;              */
+        position: relative;
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+    
+    #grid-floats > .grid-item:nth-child(1) {
+        border: dashed red 2px;
+        width: 265px;
+        height: 360px;;
+    }
+    
+    #grid-floats > .grid-item:nth-child(2) {
+        border: dashed red 2px;
+        width: 265px;
+        height: 360px;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #grid-flex {
+        border: blueviolet 3px dotted;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0px;
+        text-align: justify;
+        width: 700px;
+    }
+    
+    #grid-flex > .grid-item {    /* flex-shrink into :nth-child */
+        border: 3px dotted red;
+        margin: 10px;
+        width: 160px;
+        height: 400px;
+        margin: 10px;
+        padding: 0px 10px 0px 10px;
+        list-style-type: none;
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+    
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+        animation-name: sha;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes sha {
+        0% {text-shadow: 2px -10px #0a1df2;}
+        5% {text-shadow: 2px -8px #37d925;}
+        10% {text-shadow: 2px -6px #ed323e;}
+        15% {text-shadow: 2px -4px #0a1df2;}
+        20% {text-shadow: 2px -2px #37d925;}
+        25% {text-shadow: 2px 0px #ed323e;}
+        30% {text-shadow: 2px 2px #0a1df2;}
+        35% {text-shadow: 2px 4px #37d925;}
+        40% {text-shadow: 2px 6px #ed323e;}
+        45% {text-shadow: 2px 8px #0a1df2;}
+        50% {text-shadow: 2px 10px #37d925;}
+        55% {text-shadow: 2px 8px #ed323e;}
+        60% {text-shadow: 2px 6px #0a1df2;}
+        65% {text-shadow: 2px 4px #37d925;}
+        70% {text-shadow: 2px 2px #ed323e;}
+        75% {text-shadow: 2px 0px #0a1df2;}
+        80% {text-shadow: 2px -2px #37d925;}
+        85% {text-shadow: 2px -4px #ed323e;}
+        90% {text-shadow: 2px -6px #0a1df2;}
+        95% {text-shadow: 2px -8px #37d925;}
+        100% {text-shadow: 2px -10px #ed323e;}
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    #grid-floats {
+        border: blue 3px dotted;
+        width: 400px;
+        height: auto;
+        text-align: justify;
+    }
+    
+    #grid-floats:after {
+        content: "";
+        display: block;
+        clear: both;
+        padding: auto;
+    }
+    
+    #grid-floats > .grid-item:nth-child(1) {
+        border: dashed red 2px;
+        width: 356px;
+    }
+    
+    #grid-floats > .grid-item {
+        border: 3px green dashed;
+        width: 160px;
+        height: 400px;
+        padding: 0px 10px 0px 10px;
+        list-style-type: none;
+        float: inline-start;
+        position: relative;
+        font-size: 14px;
+        margin: 5px;
+        background-color: #ffffff;
+        left: -35px;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #grid-flex {
+        border: blueviolet 3px dotted;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0px;
+        text-align: justify;
+        width: 400px;
+    }
+    
+    #grid-flex > .grid-item {    /* flex-shrink into :nth-child */
+        border: 3px dotted red;
+        margin: 10px;
+        width: 160px;
+        height: 400px;
+        margin: 5px;
+        padding: 0px 10px 0px 10px;
+        list-style-type: none;
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+    
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+        animation-name: sha;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes sha {
+        0% {text-shadow: 2px -10px #0a1df2;}
+        5% {text-shadow: 2px -8px #37d925;}
+        10% {text-shadow: 2px -6px #ed323e;}
+        15% {text-shadow: 2px -4px #0a1df2;}
+        20% {text-shadow: 2px -2px #37d925;}
+        25% {text-shadow: 2px 0px #ed323e;}
+        30% {text-shadow: 2px 2px #0a1df2;}
+        35% {text-shadow: 2px 4px #37d925;}
+        40% {text-shadow: 2px 6px #ed323e;}
+        45% {text-shadow: 2px 8px #0a1df2;}
+        50% {text-shadow: 2px 10px #37d925;}
+        55% {text-shadow: 2px 8px #ed323e;}
+        60% {text-shadow: 2px 6px #0a1df2;}
+        65% {text-shadow: 2px 4px #37d925;}
+        70% {text-shadow: 2px 2px #ed323e;}
+        75% {text-shadow: 2px 0px #0a1df2;}
+        80% {text-shadow: 2px -2px #37d925;}
+        85% {text-shadow: 2px -4px #ed323e;}
+        90% {text-shadow: 2px -6px #0a1df2;}
+        95% {text-shadow: 2px -8px #37d925;}
+        100% {text-shadow: 2px -10px #ed323e;}
+    }
+
 }
