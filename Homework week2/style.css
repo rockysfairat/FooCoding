@@ -3,7 +3,7 @@ body {
 }
 
 #grid-floats {
-    border: blue 3px dotted;
+   /*  border: blue 3px dotted; */
     width: 1400px;
     height: auto;
     margin: auto;
@@ -19,7 +19,7 @@ body {
 
 #grid-floats > .grid-item {
     float: left;
-    border: 3px green dashed;
+  /*   border: 3px green dashed; */
     width: 250px;
     height: 400px;
     margin: 10px;
@@ -29,11 +29,12 @@ body {
     left: 3%;
     position: relative;
     background-color: #ffffff;
+    border-radius: 1%;
 }
 
 #grid-floats > .grid-item:nth-child(1) {
-    border: dashed red 2px;
-    width: 565px;
+    width: 560px;
+  /*   border: dashed red 2px; */
     height: 400px;
     text-align: justify;
 }
@@ -45,12 +46,11 @@ img {
 
 .grid-item:nth-child(1)  > img {
     width: 70%;
-    border: blue solid 1px;
     margin-left: 30px;
 }
 
 #grid-flex {
-    border: blueviolet 3px dotted;
+  /*   border: blueviolet 3px dotted; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -58,8 +58,8 @@ img {
     text-align: justify;
 }
 
-#grid-flex > .grid-item {    /* flex-shrink into :nth-child */
-    border: 3px dotted red;
+#grid-flex > .grid-item {
+   /*  border: 3px dotted red; */
     margin: 10px;
     width: 250px;
     height: 400px;
@@ -67,6 +67,7 @@ img {
     padding: 20px;
     list-style-type: none;
     background-color: #ffffff;
+    border-radius: 1%;
 }
 
 h2 {
@@ -104,7 +105,7 @@ h2 {
 @media screen and (max-width: 800px) {
     
     #grid-floats {
-        border: blue 3px dotted;
+      /*   border: blue 3px dotted; */
         width: 700px;
         height: auto;
         text-align: justify;
@@ -119,7 +120,7 @@ h2 {
     
     #grid-floats > .grid-item {
         float: left;
-        border: 3px green dashed;
+       /*  border: 3px green dashed; */
         width: 160px;
         height: 400px;
         margin: 10px;
@@ -132,13 +133,13 @@ h2 {
     }
     
     #grid-floats > .grid-item:nth-child(1) {
-        border: dashed red 2px;
-        width: 282px;
+       /* border: dashed red 2px; */
+        width: 275px;
         height: 360px;;
     }
     
     #grid-floats > .grid-item:nth-child(2) {
-        border: dashed red 2px;
+        /* border: dashed red 2px; */
         width: 265px;
         height: 360px;
     }
@@ -149,7 +150,7 @@ h2 {
     }
     
     #grid-flex {
-        border: blueviolet 3px dotted;
+      /*   border: blueviolet 3px dotted; */
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -159,7 +160,7 @@ h2 {
     }
     
     #grid-flex > .grid-item {    /* flex-shrink into :nth-child */
-        border: 3px dotted red;
+       /* border: 3px dotted red; */
         margin: 10px;
         width: 160px;
         height: 400px;
@@ -206,7 +207,7 @@ h2 {
 @media screen and (max-width: 600px) {
 
     #grid-floats {
-        border: blue 3px dotted;
+      /*  border: blue 3px dotted; */
         width: 400px;
         height: auto;
         text-align: justify;
@@ -222,12 +223,12 @@ h2 {
     }
     
     #grid-floats > .grid-item:nth-child(1) {
-        border: dashed rgb(224, 6, 170) 2px;
-        width: 356px;
+      /*  border: dashed rgb(224, 6, 170) 2px; */
+        width: 350px;
     }
 
     #grid-floats > .grid-item:nth-child(2) {
-        border: 3px green dashed;
+     /*   border: 3px green dashed; */
         width: 160px;
         height: 400px;
         padding: 0px 10px 0px 10px;
@@ -241,7 +242,7 @@ h2 {
     }
     
     #grid-floats > .grid-item {
-        border: 3px green dashed;
+      /*  border: 3px green dashed; */
         width: 160px;
         height: 400px;
         padding: 0px 10px 0px 10px;
@@ -260,7 +261,7 @@ h2 {
     }
     
     #grid-flex {
-        border: blueviolet 3px dotted;
+      /*  border: blueviolet 3px dotted; */
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -270,7 +271,7 @@ h2 {
     }
     
     #grid-flex > .grid-item {    /* flex-shrink into :nth-child */
-        border: 3px dotted red;
+      /*  border: 3px dotted red; */
         margin: 10px;
         width: 160px;
         height: 400px;
