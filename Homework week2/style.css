@@ -2,6 +2,43 @@ body {
     background-color: #ffde0f;
 }
 
+h1 {
+    font-family: Comic Sans, cursive; /* THE KING OF THE FONTS!!!!!! */
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: Comic Sans, cursive;
+    animation-name: sha;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sha { 
+    0% {text-shadow: 2px -10px #0a1df2;}
+    5% {text-shadow: 2px -8px #37d925;}
+    10% {text-shadow: 2px -6px #ed323e;}
+    15% {text-shadow: 2px -4px #0a1df2;}
+    20% {text-shadow: 2px -2px #37d925;}
+    25% {text-shadow: 2px 0px #ed323e;}
+    30% {text-shadow: 2px 2px #0a1df2;}
+    35% {text-shadow: 2px 4px #37d925;}
+    40% {text-shadow: 2px 6px #ed323e;}
+    45% {text-shadow: 2px 8px #0a1df2;}
+    50% {text-shadow: 2px 10px #37d925;}
+    55% {text-shadow: 2px 8px #ed323e;}
+    60% {text-shadow: 2px 6px #0a1df2;}
+    65% {text-shadow: 2px 4px #37d925;}
+    70% {text-shadow: 2px 2px #ed323e;}
+    75% {text-shadow: 2px 0px #0a1df2;}
+    80% {text-shadow: 2px -2px #37d925;}
+    85% {text-shadow: 2px -4px #ed323e;}
+    90% {text-shadow: 2px -6px #0a1df2;}
+    95% {text-shadow: 2px -8px #37d925;}
+    100% {text-shadow: 2px -10px #ed323e;}
+}
+
 #grid-floats {
    /*  border: blue 3px dotted; */
     width: 1400px;
@@ -70,40 +107,14 @@ img {
     border-radius: 1%;
 }
 
-h2 {
-    font-size: 25px;
-    font-weight: 700;
-    animation-name: sha;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes sha {
-    0% {text-shadow: 2px -10px #0a1df2;}
-    5% {text-shadow: 2px -8px #37d925;}
-    10% {text-shadow: 2px -6px #ed323e;}
-    15% {text-shadow: 2px -4px #0a1df2;}
-    20% {text-shadow: 2px -2px #37d925;}
-    25% {text-shadow: 2px 0px #ed323e;}
-    30% {text-shadow: 2px 2px #0a1df2;}
-    35% {text-shadow: 2px 4px #37d925;}
-    40% {text-shadow: 2px 6px #ed323e;}
-    45% {text-shadow: 2px 8px #0a1df2;}
-    50% {text-shadow: 2px 10px #37d925;}
-    55% {text-shadow: 2px 8px #ed323e;}
-    60% {text-shadow: 2px 6px #0a1df2;}
-    65% {text-shadow: 2px 4px #37d925;}
-    70% {text-shadow: 2px 2px #ed323e;}
-    75% {text-shadow: 2px 0px #0a1df2;}
-    80% {text-shadow: 2px -2px #37d925;}
-    85% {text-shadow: 2px -4px #ed323e;}
-    90% {text-shadow: 2px -6px #0a1df2;}
-    95% {text-shadow: 2px -8px #37d925;}
-    100% {text-shadow: 2px -10px #ed323e;}
-}
+/* for Tablets */
 
 @media screen and (max-width: 800px) {
-    
+    body {
+        background-color: #6ebfee;
+    }
+
+
     #grid-floats {
       /*   border: blue 3px dotted; */
         width: 700px;
@@ -159,7 +170,7 @@ h2 {
         width: 700px;
     }
     
-    #grid-flex > .grid-item {    /* flex-shrink into :nth-child */
+    #grid-flex > .grid-item {
        /* border: 3px dotted red; */
         margin: 10px;
         width: 160px;
@@ -169,43 +180,16 @@ h2 {
         font-size: 14px;
         background-color: #ffffff;
     }
-    
-    h2 {
-        font-size: 25px;
-        font-weight: 700;
-        animation-name: sha;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-    }
-    
-    @keyframes sha {
-        0% {text-shadow: 2px -10px #0a1df2;}
-        5% {text-shadow: 2px -8px #37d925;}
-        10% {text-shadow: 2px -6px #ed323e;}
-        15% {text-shadow: 2px -4px #0a1df2;}
-        20% {text-shadow: 2px -2px #37d925;}
-        25% {text-shadow: 2px 0px #ed323e;}
-        30% {text-shadow: 2px 2px #0a1df2;}
-        35% {text-shadow: 2px 4px #37d925;}
-        40% {text-shadow: 2px 6px #ed323e;}
-        45% {text-shadow: 2px 8px #0a1df2;}
-        50% {text-shadow: 2px 10px #37d925;}
-        55% {text-shadow: 2px 8px #ed323e;}
-        60% {text-shadow: 2px 6px #0a1df2;}
-        65% {text-shadow: 2px 4px #37d925;}
-        70% {text-shadow: 2px 2px #ed323e;}
-        75% {text-shadow: 2px 0px #0a1df2;}
-        80% {text-shadow: 2px -2px #37d925;}
-        85% {text-shadow: 2px -4px #ed323e;}
-        90% {text-shadow: 2px -6px #0a1df2;}
-        95% {text-shadow: 2px -8px #37d925;}
-        100% {text-shadow: 2px -10px #ed323e;}
-    }
 
 }
 
-@media screen and (max-width: 600px) {
+/* For Phones */
 
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #74f57f;
+    }
+    
     #grid-floats {
       /*  border: blue 3px dotted; */
         width: 400px;
@@ -280,38 +264,6 @@ h2 {
         list-style-type: none;
         font-size: 14px;
         background-color: #ffffff;
-    }
-    
-    h2 {
-        font-size: 25px;
-        font-weight: 700;
-        animation-name: sha;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-    }
-    
-    @keyframes sha {
-        0% {text-shadow: 2px -10px #0a1df2;}
-        5% {text-shadow: 2px -8px #37d925;}
-        10% {text-shadow: 2px -6px #ed323e;}
-        15% {text-shadow: 2px -4px #0a1df2;}
-        20% {text-shadow: 2px -2px #37d925;}
-        25% {text-shadow: 2px 0px #ed323e;}
-        30% {text-shadow: 2px 2px #0a1df2;}
-        35% {text-shadow: 2px 4px #37d925;}
-        40% {text-shadow: 2px 6px #ed323e;}
-        45% {text-shadow: 2px 8px #0a1df2;}
-        50% {text-shadow: 2px 10px #37d925;}
-        55% {text-shadow: 2px 8px #ed323e;}
-        60% {text-shadow: 2px 6px #0a1df2;}
-        65% {text-shadow: 2px 4px #37d925;}
-        70% {text-shadow: 2px 2px #ed323e;}
-        75% {text-shadow: 2px 0px #0a1df2;}
-        80% {text-shadow: 2px -2px #37d925;}
-        85% {text-shadow: 2px -4px #ed323e;}
-        90% {text-shadow: 2px -6px #0a1df2;}
-        95% {text-shadow: 2px -8px #37d925;}
-        100% {text-shadow: 2px -10px #ed323e;}
     }
 
 }
