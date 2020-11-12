@@ -167,7 +167,6 @@ img {
         flex-wrap: wrap;
         padding: 0px;
         text-align: justify;
-        width: 700px;
     }
     
     #grid-flex > .grid-item {
@@ -251,10 +250,10 @@ img {
         flex-wrap: wrap;
         padding: 0px;
         text-align: justify;
-        width: 400px;
+        
     }
     
-    #grid-flex > .grid-item {    /* flex-shrink into :nth-child */
+    #grid-flex > .grid-item {   
       /*  border: 3px dotted red; */
         margin: 10px;
         width: 160px;
