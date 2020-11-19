@@ -8,23 +8,66 @@
     </head>
 <body>
 
+<img class="decorationLines" src="images/bg-header-muumimuseo.png">
+
 <header>
 
     <div class="logo">
         <img src="images/apple-touch-icon.png">
-        <p>Moomin Museum</p>
+        <a href="#">Moomin Museum</a>
     </div>
 
-    <div class="mainMenu">
-        <ul>
-            <li>Экспозиции</li>
-            <li>Посещение</li>
-            <li>О музее</li>
-            <li><a href="#">Рестораны</a></li>
-            <li><a href="#">Магазин</a></li>
-            <li>Контакты</li>
-        </ul>
-    </div>
+    <nav>
+        
+        <div class="dropdown">
+            <a class="droplink" href="#">Экспозиции</a>
+            <div class="dropdown-content">
+                <a href="#">Что дальше?</a>
+                <a href="#">Обсерватория</a>
+                <a href="#">Читальный зал</a>
+                <a href="#">Мастерская</a>
+                <a href="#">Магазин</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a class="droplink" href="#">Посещение</a>
+            <div class="dropdown-content">
+                <a href="#">Информация</a>
+                <a href="#">Гид по музею</a>
+                <a href="#">Для групп</a>
+                <a href="#">Читальный зал</a>
+                <a href="#">Рестораны</a>
+                <a href="#">Магазин</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a class="droplink" href="#">О музее</a>
+            <div class="dropdown-content">
+                <a href="#">Туве Янссон</a>
+                <a href="#">Коллекция</a>
+            </div>
+        </div>
+
+        <div class="navLinkBox">
+            <a href="#">Рестораны</a>
+        </div>
+
+        <div class="navLinkBox">
+            <a href="#">Магазин</a>
+        </div>
+        
+        <div class="dropdown">
+            <a class="droplink" href="#">Контакты</a>
+            <div class="dropdown-content">
+                <a href="#">Персонал</a>
+                <a href="#">Для СМИ</a>
+                <a href="#">Ссылки</a>
+            </div>
+        </div>
+
+    </nav>
 
     <div class="languageMenuBox">
         Language menu is going to be here
@@ -36,9 +79,9 @@
 
 </header>
 
-<main style="border: rgb(6, 92, 179) 3px solid;">
+<main>
 
-    <div class="mainPicturesBox" style="border: dotted 5px rgb(100, 21, 179);">
+    <div class="mainPicturesBox">
 
         <div class="blackNwhitePic">
             <img src="images/mv2.jpg" alt=""> <!-- ALT is missing -->
@@ -53,10 +96,11 @@
             <p>Информация</p>
         </div>
 
-        <!-- <div class="adress"> 
+        <div class="adress"> 
             <p>Музей муми-троллей открыт вт-ср 9-17, чт-пт 9-19, сб-вс 10-17. Взрослые 13 евро, дети 6 евро.</p>
             <p>Конгресс-холл «Тампере-тало», адрес: Yliopistonkatu 55, Тампере, Финляндия.</p>
-        </div> --> <!-- Fix this shit!!!!!!!!! -->
+        </div>
+
     </div>
 
     <article class="expo">

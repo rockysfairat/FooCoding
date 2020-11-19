@@ -5,7 +5,7 @@ ul {
 }
 
 body {
-    padding: 0 7em 0 7em;
+    padding: 0 10em 0 10em;
     margin: 0px;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
     font-family: Caveat, serif;
-    font-size: 3em;
+    font-size: 2.6em;
 }
 
 h3 {
@@ -31,11 +31,25 @@ h3 {
     margin: 2em 0 -1em 0;
 }
 
+h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: Caveat, serif;
+    font-size: 1.7em;
+}
+
 main {
     width: 100%;
 }
 
 /* Header: */
+
+.decorationLines {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5%;
+}
 
 header {
     display: grid;
@@ -44,22 +58,63 @@ header {
     grid-template-columns: 1fr 3fr 1fr;
 }
 
+ /* Logotype box: */
+
 .logo {
     grid-area: 1 / 1 / 2 / 2;
-    background: chartreuse;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .logo > img {
-    width: 35%;
+    width: 30%;
     height: auto;
 }
 
-.mainMenu {
+.logo > a:link {
+    text-transform: uppercase;
+    font-family: Bellota, serif;
+    color: #000;
+    text-decoration: none;
+}
+
+.logo > a:hover {
+    color: #000;
+}
+
+.logo > a:visited {
+    color: #000;
+}
+
+ /* Navigation box: */
+
+nav {
     grid-area: 1 / 2 / 2 / 3;
-    background: rgb(177, 233, 122);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navLinkBox {
+    display: flex;
+    align-items: center;
+}
+
+.navLinkBox > a:link {
+    text-transform: uppercase;
+    font-family: Bellota, serif;
+    color: #000;
+    text-decoration: none;
+}
+
+.navLinkBox > a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.navLinkBox > a:visited {
+    color: #000;
 }
 
 .languageMenuBox {
@@ -67,9 +122,61 @@ header {
     background: rgb(92, 124, 60);
 }
 
+ /* Navigation dropdown menus: */
+
+.droplink {
+    background-color: #fff;
+    color: #000;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #35733c;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Bellota, serif;
+  }
+  
+.dropdown-content a:hover {
+    background-color: #35733c;
+    text-decoration: underline;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .droplink {
+    background-color: #fff;
+    font-family: Bellota, serif;
+    text-decoration: underline;
+}
+
+.droplink {
+    font-family: Bellota, serif;
+    text-decoration: none;
+}
+
+ /* Header big image styling: */
+
 .headImage {
     grid-area: 2 / 1 / 3 / 4;
-    border: solid 2px red;
     display: flex;
     justify-content: center;
 }
@@ -84,26 +191,67 @@ header {
 .mainPicturesBox {
     width: auto;
     display: grid;
-    grid-template-columns: 2fr repeat(3, 1fr) 2fr 2fr;
-    grid-template-rows: 50px repeat(4, 1fr);
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 50px 100px 2fr 0.5fr;
     margin-top: -50px;
 }
 
 .blackNwhitePic {
-    grid-area: 2 / 1 / 5 / 6;
+    grid-area: 2 / 1 / 4 / 4;
+}
+
+.blackNwhitePic > img {
+    width: 100%;
 }
 
 .museumTitle {
-    grid-area: 1 / 2 / 3 / 5;
+    grid-area: 1 / 2 / 3 / 3;
     z-index: 1;
-    background: chocolate;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.museumTitle > h2 {
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .redInfo {
-    grid-area: 2 / 3 / 4 / 5;
+    grid-area: 2 / 3 / 3 / 4;
+    width: 120px;
+    height: 120px;
     z-index: 2;
     background: red;
     border-radius: 50%;
+    top: 50px;
+    left: -40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redInfo > p {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.adress {
+    grid-area: 4 / 1 / 5 / 4;
+    background: #35733c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.adress > p {
+    font-size: 1.2em;
+    margin: 0.2em 0 0.2em 0;
+    color: #fff;
 }
 
 /* Expositions box: */
@@ -112,7 +260,7 @@ header {
     width: auto;
     display: grid;
     grid-template-columns: 1fr repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 230px 2fr;
 }
 
 .expoTitle {
@@ -158,7 +306,7 @@ header {
 .news {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr repeat(2, 2fr);
+    grid-template-rows: 230px repeat(2, 2fr);
 }
 
 .newsTitle {
@@ -192,8 +340,8 @@ header {
 .newsAttention {
     grid-area: 3/3 / 4 / 4;
     background: red;
-    width: 50%;
-    height: 28%;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     display: flex;
     align-items: center;
