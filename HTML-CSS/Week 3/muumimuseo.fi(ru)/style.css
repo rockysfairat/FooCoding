@@ -219,7 +219,7 @@ header {
     height: auto;
 }
 
-.souvenirStore {
+.souvenirStore { 
     grid-area: 1 / 2 / 2 / 3;
     padding-left: 15px;
     padding-right: 15px;
