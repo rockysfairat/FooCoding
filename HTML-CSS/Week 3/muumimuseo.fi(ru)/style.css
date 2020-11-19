@@ -149,7 +149,8 @@ header {
 }
 
 #expoSpecialDate {
-
+    font-family: Bellota, serif;
+    margin: 0 0 -15px 15px;
 }
 
 /* News box: */
@@ -210,10 +211,18 @@ header {
 
 .souvenirStoreImg {
     grid-area: 1 / 1/ 2 / 2;
+    margin: 0;
+}
+
+.souvenirStoreImg > img , .readingRoomImg > img {
+    width: 100%;
+    height: auto;
 }
 
 .souvenirStore {
     grid-area: 1 / 2 / 2 / 3;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .quote {
@@ -221,6 +230,24 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2em;
+}
+
+.readingRoom {
+    grid-area: 3 / 1 / 4 / 2;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.readingRoomImg {
+    grid-area: 3 / 2 / 4 / 3;
+    margin: 0;
+}
+
+/* Additional Contant - fonts: */
+
+.souvenirStore > p , .readingRoom > p {
+    font-size: 1.2em;
 }
 
 .quote > h1 , .quote > h2 {
@@ -234,14 +261,6 @@ header {
     color: #000;
     font-family: Bellota, serif;
     font-size: 1.7em;
-}
-
-.readingRoom {
-    grid-area: 3 / 1 / 4 / 2;
-}
-
-.readingRoomImg {
-    grid-area: 3 / 2 / 4 / 3;
 }
 
 
