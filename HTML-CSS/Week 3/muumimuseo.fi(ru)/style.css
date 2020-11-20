@@ -5,12 +5,12 @@ ul {
 }
 
 body {
-    padding: 0 10em 0 10em;
     margin: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0 10em 0 10em;
 }
 
 h1 {
@@ -117,11 +117,6 @@ nav {
     color: #000;
 }
 
-.languageMenuBox {
-    grid-area: 1 / 3 / 2 / 4;
-    background: rgb(92, 124, 60);
-}
-
  /* Navigation dropdown menus: */
 
 .droplink {
@@ -171,6 +166,62 @@ nav {
 .droplink {
     font-family: Bellota, serif;
     text-decoration: none;
+}
+
+/* Dropdown menu for mobile devices - DO NOT TOUCH */
+
+.dropdown_M , .droplink_M, 
+.dropdown-content_M {
+    display: none;
+}
+
+/* Language box: */
+
+
+.languageMenuBox {
+    grid-area: 1 / 3 / 2 / 4;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 30px;
+}
+
+.lang_dropbtn {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+.lang_dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.lang_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 50px;
+    z-index: 1;
+}
+  
+.lang_dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.lang_dropdown-content a:hover {background-color: #fff;}
+  
+.lang_dropdown:hover .lang_dropdown-content {display: block;}
+  
+.lang_dropdown:hover .lang_dropbtn {background-color: #fff;}
+
+span {
+    font-size: 10px;
 }
 
  /* Header big image styling: */
@@ -234,9 +285,18 @@ nav {
     align-items: center;
 }
 
-.redInfo > p {
+.redInfo > a:link {
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.redInfo > a:hover {
+    text-decoration: underline;
+}
+
+.redInfo > a:visited {
+    color: #fff;
 }
 
 .adress {
@@ -398,6 +458,10 @@ nav {
     font-size: 1.2em;
 }
 
+.souvenirStore > h2 , .readingRoom > h2 {
+    margin-bottom: 0;
+}
+
 .quote > h1 , .quote > h2 {
     color: #000;
     font-family: Bellota, serif;
@@ -431,14 +495,75 @@ footer {
     justify-content: space-between;
 }
 
+.linksAndContacts > ul {
+    padding: 0 15px 0 15px;
+}
+
+.linksAndContacts > ul > li {
+    font-family: Bellota, serif;
+    font-size: 0.8em;
+    line-height: 2em;
+    color: #fff;
+}
+
+.linksAndContacts > ul > li > a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.linksAndContacts > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+.linksAndContacts > ul > li > a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.boxedLink {
+    border: solid 1px #fff;
+    padding: 3px;
+}
+
+.boxedLink , .fatLink {
+    text-transform: uppercase;
+}
+
+.footerBottom {
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
 .footerBottom > div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.svgBox {
+    justify-content: space-around;
+    align-items: center;
+    width: 7em;
+}
+
+svg {
+    fill: #35733c;
+}
+
+svg:hover {
+    fill: #363636;
+}
+
+.Tampere {
+    width: 40px;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
 
 }
 
-.footerBottom > div > img {
-    width: 30px;
+.Tampere img {
+    width:100%;
     height: auto;
 }
