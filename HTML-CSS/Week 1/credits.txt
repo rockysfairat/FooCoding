@@ -1,3 +1,5 @@
+favicon -- https://www.flaticon.com/authors/freepik
+
 email icon --- https://thenounproject.com/search/?q=email&i=99709
 phone icon --- https://thenounproject.com/search/?q=phone&i=2268309
 
@@ -10,8 +12,16 @@ instagram -- https://www.flaticon.com/authors/freepik
 telegram -- Telegram by Danil Polshin from the Noun Project -- https://thenounproject.com/search/?q=telegram&i=1634539
 
 
-iron spike -- screw by Christian Baptist from the Noun Project -- https://thenounproject.com/search/?q=screw&i=2171646
+chat icon -- https://thenounproject.com/search/?q=bubble&i=3476034
+start man -- https://thenounproject.com/term/man/1034561/
+arrow -- https://thenounproject.com/search/?q=arrow&i=498230
+jumping man -- https://thenounproject.com/term/happy/2085702/
+falling guy -- https://thenounproject.com/search/?q=falling&i=1352921
+hole -- https://thenounproject.com/search/?q=hole&i=1710209
 
+baby icon -- https://thenounproject.com/search/?q=birth&i=2541230
+
+school -- https://thenounproject.com/search/?q=school&i=3172186
 
 cell phone --- Cell Phone by Romualdas Jurgaitis from the Noun Project -- https://thenounproject.com/search/?q=cell+phone&i=371247
 
@@ -27,9 +37,16 @@ web development icon --- web development by ProSymbols from the Noun Project - -
 
 
 
-Chameleon -- chameleon with spikes by Valerie Lamm from the Noun Project -- https://thenounproject.com/term/chameleon-with-spikes/2934246/
+Chameleon -- https://thenounproject.com/search/?q=chameleon&i=1002704
 Skull -- Skull by Alvaro Cabrera from the Noun Project -- https://thenounproject.com/vendetusvectores/collection/skulls/?i=1174134
+snake -- https://thenounproject.com/search/?q=snake&i=3199542
+palm -- https://thenounproject.com/search/?q=palm&i=2933769
 
 
-PALMS1 -- <span>Photo by <a href="https://unsplash.com/@whoisflo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Florian Hahn</a> on <a href="https://unsplash.com/s/photos/palms?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+treasure chest -- https://thenounproject.com/search/?q=treasure+chest&i=3373162
+guy waves -- https://thenounproject.com/term/man/17201/
+
+
 PALMS with sea -- <span>Photo by <a href="https://unsplash.com/@muuvmuuv?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Marvin Heilemann</a> on <a href="https://unsplash.com/s/photos/palms?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+
+Ocean -- https://unsplash.com/photos/60wCqYf7Fg8
