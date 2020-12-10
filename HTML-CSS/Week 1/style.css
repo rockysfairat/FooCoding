@@ -12,561 +12,1227 @@ body {
     margin: 0;
 }
 
-header {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.2);
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: minmax(20px, auto) 1fr 1fr;
-    height: 27vw;
-    width: 100%;
-    min-height: 0;
-}
-
-header > img {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-}
-
-.mainIMG {
-    grid-area: 1/1/4/2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header > .mainIMG > img {
-    border-radius: 50%;
-    width: 75%;
-}
-
-.title {
-    grid-area: 1/2/2/3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    width: 100%;
-    color: #003f88;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 4vw;
-}
-
-h1::after {
-    content: '> web-developer';
-    display: block;
-    font-size: 2vw;
-}
-
-.email_and_phone {
-    grid-area: 2/2/3/3;
-    display: flex;
-    flex-direction: column;
-}
-
-.email_and_phone > a {
-    display: flex;
-    vertical-align: text-top;
-    justify-content: end;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
-    color: #003f88;
-    text-decoration: none;
-}
-
-.email_and_phone > a:visited {
-    color: #003f88;
-}
-
-svg {
-    width: 2vw;
-    fill: #003f88;
-}
-
-/* Social Media icons area: */
-
-.social_media {
-    grid-area: 3/2/4/3;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.social_media > a > svg {
-    margin: 0.2vw;
-    width: 5vw;
-    height: 5vw;
-    fill: #003f88;
-}
-
-.social_media > a > svg:hover {
-    fill: #00509d;
-    transition-delay: 90ms;
-}
-
-/* MAIN area: */
-
-main {
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(15, 6.4vw);
-    grid-template-rows: repeat(47, 6.4vw);
-    position: relative;
-    background-color: rgba(245, 233, 66, 0.5);
-    width: 100%;
-}
-
-p {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1vw;
-    color: #ffd500;
-    margin: 0;
-}
-
-h2 {
-    padding: 1vw;
-    color: #ffd500;
-    margin: 0;
-}
-
-main > img {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-
-/* DIVs with birth and education: */
-
-.start-position-and-void-description {
-    overflow: hidden;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.start-void1 {
-    grid-area: 1/1/5/5;
-    position: relative;
-}
-
-.start-void1 > svg {
-    fill: #000;
-}
-
-.bubble-start {
-    width: 14.3vw;
-    transform: rotate(-10deg) scaleX(-1);
-    position: absolute;
-    left: 6vw;
-} 
-
-.start-guy {
-    width: 10vw;
-    position: absolute;
-    right: -1vw;
-    bottom: -2vw
-}
-
-.start-1-paragraph {
-    color: #fff;
-    font-size: 1.9vw;
-    font-weight: bold;
-    transform: rotate(-10deg);
-    position: absolute;
-    right: 6.8vw;
-    top: 6.4vw;
-}
-
-.start-2-paragraph {
-    color: #fff;
-    font-size: 1.3vw;
-    font-weight: bold;
-    transform: rotate(-10deg);
-    position: absolute;
-    right: 6.3vw;
-    top: 10vw;
-}
-
-.birth-and-education {
-    border-radius: 10%;
-    background: #00509d;
-    overflow: hidden;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.be1 {
-    grid-area: 3/9/6/14;
-}
-
-.be2 {
-    grid-area: 7/3/10/8;
-}
-
-.start-void2 {
-    grid-area: 12/2/16/11;
-    position: relative;
-}
-
-.start-void2 > svg {
-    width: 10vw;
-    transform: scaleX(-1) rotate(-110deg);
-    position: absolute;
-    top: 9vw;
-    right: 5vw;
-    fill: #000;
-}
-
-.start-void2 > p {
-    color: #000;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 3.2vw;
-    font-weight: bold;
-    padding: 0;
-    position: absolute;
-    right: 9vw;
-    top: 12vw;
-    transform: rotate(-10deg);
-}
-
-.jump-into-the-void {
-    grid-area: 12/11/17/16;
-    position: relative;
-}
-
-.jumping-guy-top {
-    width: 8vw;
-    position: absolute;
-    left: 2vw;
-    top: 3vw;
-    fill: #000;
-}
-
-.jumping-guy-bottom {
-    width: 8vw;
-    position: absolute;
-    right: 4vw;
-    bottom: -1vw;
-    fill: #000;
-}
-
-.hole-top {
-    width: 12vw;
-    position: absolute;
-    top: 7vw;
-    left: 7vw;
-    fill: rgb(241, 79, 20);
-}
-
-.hole-bottom {
-    width: 12vw;
-    position: absolute;
-    right: 3vw;
-    bottom: 5vw;
-    transform: rotate(180deg);
-    fill: rgb(64, 173, 240);
-}
-
-/* DIVs with information about previous work places: */
-
-.workPlace {
-    border-radius: 10%;
-    background: #00509d;
-    overflow: hidden;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.spike-top-left {
-    position: absolute;
-    width: 1.3vw;
-    left: 1.7vw;
-    top: 2vw;
-    fill: #ffd500;
-}
-
-.spike-top-right {
-    position: absolute;
-    width: 1.3vw;
-    right: 1.5vw;
-    top: 1.45vw;
-    fill: #ffd500;
-    transform: rotate(25deg);
-}
-
-.spike-bottom-left {
-    position: absolute;
-    width: 1.3vw;
-    bottom: 1.5vw;
-    left: 1vw;
-    fill: #ffd500;
-    transform: rotate(35deg);
-}
-
-.spike-bottom-right {
-    position: absolute;
-    width: 1.3vw;
-    bottom: 2.5vw;
-    right: 1.8vw;
-    fill: #ffd500;
-    transform: rotate(85deg);
-}
-
-.svg_container > svg {
-    width: 150px;
-    fill: #ffd500;
-    display: flex;
-    align-items: center;
-}
-
-.wp1 {
-    grid-area: 19/2/23/8;
-}
-
-.wp2 {
-    grid-area: 20/10/24/15;
-}
-
-.wp3 {
-    grid-area: 27/2/31/8;
-}
-
-.wp4 {
-    grid-area: 29/10/33/15;
-}
-
-.wp5 {
-    grid-area: 35/5/39/11;
-}
-
-.wp6 {
-    grid-area: 41/2/45/8;
-}
-
-/* Decorative DIVs, backgrounds for workPlace DIVs: */
-
-.Deco {
-    border-radius: 35%;
-    background: #00509d;
-    z-index: 2;
-}
-
-.wp1Deco1 {
-    grid-area: 19/2/23/8;
-    transform: rotate(15deg);
-}
-
-.wp2Deco2 {
-    grid-area: 20/10/24/15;
-    transform: rotate(160deg);
-}
-
-.wp3Deco3 {
-    grid-area: 27/2/31/8;
-    transform: rotate(15deg);
-}
-
-.wp4Deco4 {
-    grid-area: 29/10/33/15;
-    transform: rotate(170deg);
-}
-
-.wp5Deco5 {
-    grid-area: 35/5/39/11;
-    transform: rotate(19deg);
-}
-
-.wp5Deco6 {
-    grid-area: 3/9/6/14;
-    transform: rotate(-15deg);
-}
-
-.wp5Deco7 {
-    grid-area: 7/3/10/8;
-    transform: rotate(16deg);
-}
-
-.wp6Deco8 {
-    grid-area: 41/2/45/8;
-    transform: rotate(-20deg);
-}
-
-/* DIV with the final stuff: */
-
-.finish {
-    grid-area: 42/10/47/16;
-    position: relative;
-}
-
-.treasure-chest {
-    position: absolute;
-    width: 7vw;
-    fill: #000;
-    bottom: -2vw;
-    left: 1vw;
-}
-
-.guy-waves {
-    position: absolute;
-    width: 7vw;
-    fill: #000;
-    left: 7vw;
-    bottom: -3.3vw;
-}
-
-.bubble-end {
-    position: absolute;
-    width: 25vw;
-    fill: #000;
-    left: 10vw;
-    top: -2vw;
-    transform: rotate(20deg);
-}
-
-.finish-1-paragraph {
-    color: #fff;
-    font-size: 4.5vw;
-    font-weight: bold;
-    transform: rotate(20deg);
-    position: absolute;
-    right: 4vw;
-    top: 5.5vw;
-}
-
-.finish-2-paragraph {
-    color: #fff;
-    font-size: 2vw;
-    font-weight: bold;
-    transform: rotate(20deg);
-    position: absolute;
-    right: 5.8vw;
-    top: 11vw;
-}
-
-/* Decorative DIVs, which represent lines: */
-
-.lineBox {
-    z-index: 1;
-}
-
-.lb1 {
-    grid-area: 22/5/26/12;
-    border-top: #003f88 dashed 1.2vw;
-    border-right: #003f88 dashed 1.2vw;
-    border-bottom: #003f88 dashed 1.2vw;
-}
-
-.lb2 {
-    grid-area: 26/5/27/6;
-    border-left: #003f88 dashed 1.2vw;
-}
-
-.lb3 {
-    grid-area: 30/5/32/13;
-    border-bottom: #003f88 dashed 1.2vw;
-    border-left: #003f88 dashed 1.2vw;
-    /* border-radius: 30% 0 0 0; */ /* MAYBE??????? */
-}
-
-.lb4 {
-    grid-area: 33/11/37/14;
-    border-right: #003f88 dashed 1.2vw;
-    border-bottom: #003f88 dashed 1.2vw;
-}
-
-.lb5 {
-    grid-area: 5/5/5/9;
-    border-top: #003f88 dashed 1.2vw;
-}
-
-.lb6 {
-    grid-area: 6/8/9/13;
-    border-right: #003f88 dashed 1.2vw;
-    border-bottom: #003f88 dashed 1.2vw;
-}
-
-.lb7 {
-    grid-area: 10/5/11/12;
-    border-left: #003f88 dashed 1.2vw;
-    border-bottom: #003f88 dashed 1.2vw;
-}
-
-.lb8 {
-    grid-area: 11/11/12/12;
-    border-right: #003f88 dashed 1.2vw;
-}
-
-.lb9 {
-    grid-area: 17/15/18/13;
-    border-right: #003f88 dashed 1.2vw;
-}
-
-.lb10 {
-    grid-area: 18/5/19/15;
-    border-top: #003f88 dashed 1.2vw;
-    border-left:#003f88 dashed 1.2vw;
-}
-
-.lb11 {
-    grid-area: 36/3/41/9;
-    border-left: #003f88 dashed 1.2vw;
-    border-top: #003f88 dashed 1.2vw
-}
-
-.lb12 {
-    grid-area: 45/5/47/10;
-    border-left: #003f88 dashed 1.2vw;
-    border-bottom: #003f88 dashed 1.2vw
-}
-
-/* Decorative DIVs with SVGs of animals, etc: */
-
-.black-and-white-pics1 {
-    grid-area: 24/2/26/5;
-}
+/*----------------DESKTOP version:-------------------*/
+
+@media screen and (min-width: 851px) {
+
+    header {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: minmax(20px, auto) 1fr 1fr;
+        height: 27vw;
+        width: 100%;
+        min-height: 0;
+    }
+
+    header > img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+    }
+
+    .mainIMG {
+        grid-area: 1/1/4/2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header > .mainIMG > img {
+        border-radius: 50%;
+        width: 75%;
+    }
+
+    .title {
+        grid-area: 1/2/2/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        width: 100%;
+        color: #003f88;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4vw;
+    }
+
+    h1::after {
+        content: 'web-developer';
+        display: inline-block;
+        position: absolute;
+        font-size: 2vw;
+    }
+
+    .email_and_phone {
+        grid-area: 2/2/3/3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .email_and_phone > a {
+        display: flex;
+        vertical-align: text-top;
+        justify-content: end;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5vw;
+        color: #003f88;
+        text-decoration: none;
+        margin-right: 1vw;
+    }
+
+    .email_and_phone > a:visited {
+        color: #003f88;
+    }
+
+    svg {
+        width: 2vw;
+        fill: #003f88;
+    }
+
+    /* Social Media icons area: */
+
+    .social_media {
+        grid-area: 3/2/4/3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .social_media > a > svg {
+        margin: 0.2vw;
+        width: 5vw;
+        height: 5vw;
+        fill: #003f88;
+    }
+
+    .social_media > a > svg:hover {
+        fill: #00509d;
+        transition-delay: 90ms;
+    }
+
+    /* MAIN area: */
+
+    main {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(15, 6.4vw);
+        grid-template-rows: repeat(48, 6.4vw);
+        position: relative;
+        background-color: rgba(245, 233, 66, 0.5);
+        width: 100%;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1vw;
+        color: #ffd500;
+        margin: 0;
+        font-size: 1vw;
+        padding: 0 4vw 0 1vw;
+    }
+
+    .in-progress {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1vw;
+        color: #569ef0;
+        margin: 0;
+    }
+
+    .in-progress::after {
+        content: 'in progress';
+        display: inline-block;
+        position: absolute;
+        font-size: 0.7vw;
+        color: #ffd500;
+    }
+
+    h2 {
+        padding: 1vw;
+        color: #ffd500;
+        margin: 0;
+    }
+
+    main > img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* DIVs with birth and education: */
+
+    .start-position-and-void-description {
+        overflow: hidden;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .start-void1 {
+        grid-area: 1/1/5/5;
+        position: relative;
+    }
+
+    .start-void1 > svg {
+        fill: #000;
+    }
+
+    .bubble-start {
+        width: 14.3vw;
+        transform: rotate(-10deg) scaleX(-1);
+        position: absolute;
+        left: 6vw;
+    } 
+
+    .start-guy {
+        width: 10vw;
+        position: absolute;
+        right: -1vw;
+        bottom: -2vw
+    }
+
+    .start-1-paragraph {
+        color: #fff;
+        font-size: 1.9vw;
+        font-weight: bold;
+        transform: rotate(-10deg);
+        position: absolute;
+        right: 3.8vw;
+        top: 6.4vw;
+    }
+
+    .start-2-paragraph {
+        color: #fff;
+        font-size: 1.3vw;
+        font-weight: bold;
+        transform: rotate(-10deg);
+        position: absolute;
+        right: 3.3vw;
+        top: 10vw;
+    }
+
+    .birth-and-education {
+        border-radius: 10%;
+        background: #00509d;
+        overflow: hidden;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .be1 {
+        grid-area: 3/10/6/15;
+    }
+
+    .be2 {
+        grid-area: 7/2/11/8;
+    }
+
+    .start-void2 {
+        grid-area: 13/2/17/11;
+        position: relative;
+    }
+
+    .start-void2 > svg {
+        width: 10vw;
+        transform: scaleX(-1) rotate(-110deg);
+        position: absolute;
+        top: 9vw;
+        right: 5vw;
+        fill: #000;
+    }
+
+    .start-void2 > p {
+        color: #000;
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 3.2vw;
+        font-weight: bold;
+        padding: 0;
+        position: absolute;
+        right: 9vw;
+        top: 12vw;
+        transform: rotate(-10deg);
+    }
+
+    .jump-into-the-void {
+        grid-area: 13/11/18/16;
+        position: relative;
+    }
+
+    .jumping-guy-top {
+        width: 8vw;
+        position: absolute;
+        left: 2vw;
+        top: 3vw;
+        fill: #000;
+    }
+
+    .jumping-guy-bottom {
+        width: 8vw;
+        position: absolute;
+        right: 4vw;
+        bottom: -1vw;
+        fill: #000;
+    }
+
+    .hole-top {
+        width: 12vw;
+        position: absolute;
+        top: 7vw;
+        left: 7vw;
+        fill: rgb(241, 79, 20);
+    }
+
+    .hole-bottom {
+        width: 12vw;
+        position: absolute;
+        right: 3vw;
+        bottom: 5vw;
+        transform: rotate(180deg);
+        fill: rgb(64, 173, 240);
+    }
+
+    /* DIVs with information about previous work places: */
+
+    .workPlace {
+        border-radius: 10%;
+        background: #00509d;
+        overflow: hidden;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .spike-top-left {
+        position: absolute;
+        width: 1.3vw;
+        left: 1.7vw;
+        top: 2vw;
+        fill: #ffd500;
+    }
+
+    .spike-top-right {
+        position: absolute;
+        width: 1.3vw;
+        right: 1.5vw;
+        top: 1.45vw;
+        fill: #ffd500;
+        transform: rotate(25deg);
+    }
+
+    .spike-bottom-left {
+        position: absolute;
+        width: 1.3vw;
+        bottom: 1.5vw;
+        left: 1vw;
+        fill: #ffd500;
+        transform: rotate(35deg);
+    }
+
+    .spike-bottom-right {
+        position: absolute;
+        width: 1.3vw;
+        bottom: 2.5vw;
+        right: 1.8vw;
+        fill: #ffd500;
+        transform: rotate(85deg);
+    }
+
+    .svg_container > svg {
+        width: 9vw;
+        fill: #ffd500;
+        display: flex;
+        align-items: center;
+        margin-left: 1vw;
+    }
+
+    .wp1 {
+        grid-area: 20/2/23/8;
+    }
+
+    .wp2 {
+        grid-area: 21/10/25/15;
+    }
+
+    .wp3 {
+        grid-area: 28/3/32/8;
+    }
+
+    .wp4 {
+        grid-area: 29/10/35/15;
+    }
+
+    .wp5 {
+        grid-area: 37/6/40/11;
+    }
+
+    .wp6 {
+        grid-area: 43/2/46/8;
+    }
+
+    /* Decorative DIVs, backgrounds for workPlace DIVs: */
+
+    .Deco {
+        border-radius: 35%;
+        background: #00509d;
+        z-index: 2;
+    }
+
+    .wp1Deco1 {
+        grid-area: 20/2/23/8;
+        transform: rotate(15deg);
+    }
+
+    .wp2Deco2 {
+        grid-area: 21/10/25/15;
+        transform: rotate(160deg);
+    }
+
+    .wp3Deco3 {
+        grid-area: 28/3/32/8;
+        transform: rotate(15deg);
+    }
+
+    .wp4Deco4 {
+        grid-area: 29/10/35/15;
+        transform: rotate(170deg);
+    }
+
+    .wp5Deco5 {
+        grid-area: 37/6/40/11;
+        transform: rotate(10deg);
+    }
+
+    .wp5Deco6 {
+        grid-area: 3/10/6/15;
+        transform: rotate(-15deg);
+    }
+
+    .wp5Deco7 {
+        grid-area: 7/2/11/8;
+        transform: rotate(16deg);
+    }
+
+    .wp6Deco8 {
+        grid-area: 43/2/46/8;
+        transform: rotate(-10deg);
+    } 
+
+    /* DIV with the final stuff: */
+
+    .finish {
+        grid-area: 43/10/48/16;
+        position: relative;
+    }
+
+    .treasure-chest {
+        position: absolute;
+        width: 7vw;
+        fill: #000;
+        bottom: -2vw;
+        left: 1vw;
+    }
+
+    .guy-waves {
+        position: absolute;
+        width: 7vw;
+        fill: #000;
+        left: 7vw;
+        bottom: -3.3vw;
+    }
+
+    .bubble-end {
+        position: absolute;
+        width: 25vw;
+        fill: #000;
+        left: 10vw;
+        top: -2vw;
+        transform: rotate(20deg);
+    }
+
+    .finish-1-paragraph {
+        color: #fff;
+        font-size: 4.5vw;
+        font-weight: bold;
+        transform: rotate(20deg);
+        position: absolute;
+        right: 1vw;
+        top: 5.5vw;
+    }
+
+    .finish-2-paragraph {
+        color: #fff;
+        font-size: 2vw;
+        font-weight: bold;
+        transform: rotate(20deg);
+        position: absolute;
+        right: 2.8vw;
+        top: 11vw;
+    }
+
+    /* Decorative DIVs, which represent lines: */
+
+    .lineBox {
+        z-index: 1;
+    }
+
+    .lb1 {
+        grid-area: 22/5/26/12;
+        border-top: #003f88 dashed 1vw;
+        border-right: #003f88 dashed 1vw;
+        border-bottom: #003f88 dashed 1vw;
+    }
+
+    .lb2 {
+        grid-area: 26/5/28/6;
+        border-left: #003f88 dashed 1vw;
+    }
+
+    .lb3 {
+        grid-area: 30/5/32/13;
+        border-bottom: #003f88 dashed 1vw;
+        border-left: #003f88 dashed 1vw;
+    }
+
+    .lb4 {
+        grid-area: 33/11/38/14;
+        border-right: #003f88 dashed 1vw;
+        border-bottom: #003f88 dashed 1vw;
+    }
+
+    .lb5 {
+        grid-area: 5/5/5/10;
+        border-top: #003f88 dashed 1vw;
+    }
+
+    .lb6 {
+        grid-area: 6/8/9/13;
+        border-right: #003f88 dashed 1vw;
+        border-bottom: #003f88 dashed 1vw;
+    }
+
+    .lb7 {
+        grid-area: 11/5/12/12;
+        border-left: #003f88 dashed 1vw;
+        border-bottom: #003f88 dashed 1vw;
+    }
+
+    .lb8 {
+        grid-area: 12/11/13/12;
+        border-right: #003f88 dashed 1vw;
+    }
+
+    .lb9 {
+        grid-area: 18/15/19/13;
+        border-right: #003f88 dashed 1vw;
+    }
+
+    .lb10 {
+        grid-area: 19/5/20/15;
+        border-top: #003f88 dashed 1vw;
+        border-left:#003f88 dashed 1vw;
+    }
+
+    .lb11 {
+        grid-area: 38/3/43/9;
+        border-left: #003f88 dashed 1vw;
+        border-top: #003f88 dashed 1vw
+    }
+
+    .lb12 {
+        grid-area: 45/5/48/10;
+        border-left: #003f88 dashed 1vw;
+        border-bottom: #003f88 dashed 1vw
+    }
+
+    /* Decorative DIVs with SVGs of animals, etc: */
+
+    .black-and-white-pics1 {
+        grid-area: 25/2/27/5;
+    }
+
+    .black-and-white-pics2 {
+        grid-area: 27/14/29/16;
+    }
+
+    .black-and-white-pics3 {
+        grid-area: 33/2/35/3;
+    }
+
+    .black-and-white-pics4 {
+        grid-area: 39/14/41/16;
+    }
+
+    .skull {
+        width: 10vw;
+        transform: rotate(20deg);
+        fill: #003f88;
+    }
+
+    .chameleon {
+        width: 9vw;
+        transform: rotate(-15deg) scaleX(-1);
+        fill: #003f88;
+    }
+
+    .snake {
+        width: 9vw;
+        transform: rotate(90deg);
+        fill: #003f88;
+    }
+
+    .palm {
+        width: 9vw;
+        transform: rotate(-10deg);
+        fill: #003f88; 
+    }
+
+    footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    footer > ul > li > a {
+        font-size: 1vw;
+        text-decoration: none;
+        color: #003f88;
+    }
+
+    footer > ul > li > a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-chameleon {
+        fill: #003f88;
+        width: 6vw;
+        position: absolute;
+        left: 0;
+        top: -3vw;
+    }
+
+    .footer-palm {
+        width: 5vw;
+        position: absolute;
+        bottom: -1vw;
+        right: 0;
+    }
+
+}
+
+/*----------------TABLETS and PHONES version:-------------------*/
+
+@media screen and (max-width: 850px) {
+    
+    header {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3, 5vw); 
+        width: 100%;
+        min-height: 0;
+        overflow: hidden;
+    }
+    
+    header > img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+    }
+    
+    .mainIMG {
+        grid-area: 1/1/4/2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header > .mainIMG > img {
+        border-radius: 50%;
+        width: 40%;
+    }
+    
+    .title {
+        grid-area: 1/2/2/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    h1 {
+        width: 100%;
+        color: #003f88;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3vw;
+    }
+    
+    h1::after {
+        content: 'web-developer';
+        display: inline-block;
+        font-size: 1.6vw;
+        position: absolute;
+    }
+    
+    .email_and_phone {
+        grid-area: 2/2/3/3;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .email_and_phone > a {
+        display: flex;
+        vertical-align: text-top;
+        justify-content: end;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2vw;
+        color: #003f88;
+        text-decoration: none;
+    }
+    
+    .email_and_phone > a:visited {
+        color: #003f88;
+    }
+    
+    svg {
+        width: 2vw;
+        fill: #003f88;
+    }
+    
+    /* Social Media icons area: */
+    
+    .social_media {
+        grid-area: 3/2/4/3;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    
+    .social_media > a > svg {
+        margin: 0.2vw;
+        width: 5vw;
+        height: 5vw;
+        fill: #003f88;
+    }
+    
+    .social_media > a > svg:hover {
+        fill: #00509d;
+        transition-delay: 90ms;
+    }
+    
+    /* MAIN area: */
+    
+    main {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(15, 6.4vw);
+        grid-template-rows: repeat(80, 6.4vw);
+        position: relative;
+        background-color: rgba(245, 233, 66, 0.5);
+        width: 100%;
+    }
+    
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1vw;
+        color: #ffd500;
+        margin-right: 2vw;
+    }
+
+    br {
+        display: block;
+        line-height: 10%;
+    }
+    
+    .in-progress {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1vw;
+        color: #569ef0;
+        margin: 0;
+    }
+    
+    .in-progress::after {
+        content: 'in progress';
+        display: inline-block;
+        position: absolute;
+        font-size: 1.7vw;
+        color: #ffd500;
+    }
+    
+    h2 {
+        padding: 1vw;
+        color: #ffd500;
+        margin: 0;
+    }
+    
+    main > img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* DIVs with birth and education: */
+    
+    .start-position-and-void-description {
+        overflow: hidden;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .start-void1 {
+        grid-area: 1/1/5/5;
+        position: relative;
+    }
+    
+    .start-void1 > svg {
+        fill: #000;
+    }
+    
+    .bubble-start {
+        width: 20vw;
+        transform: rotate(-10deg) scaleX(-1);
+        position: absolute;
+        left: 1vw;
+        top: 1vw;
+    } 
+    
+    .start-guy {
+        width: 9vw;
+        position: absolute;
+        right: 1.8vw;
+        bottom: -2vw
+    }
+    
+    .start-1-paragraph {
+        color: #fff;
+        font-size: 2.8vw;
+        font-weight: bold;
+        transform: rotate(-10deg);
+        position: absolute;
+        left: 1vw;
+        top: 3vw;
+    }
+    
+    .start-2-paragraph {
+        color: #fff;
+        font-size: 1.8vw;
+        font-weight: bold;
+        transform: rotate(-10deg);
+        position: absolute;
+        right: 4.5vw;
+        top: 8vw;
+    }
+    
+    .birth-and-education {
+        background: #00509d;
+        overflow: hidden;
+        z-index: 3;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        font-size: 2.5vw;
+        min-height: 0;
+        overflow: hidden;
+    }
+    
+    .be1 {
+        grid-area: 6/2/10/15;
+    }
+    
+    .be2 {
+        grid-area: 11/2/20/15;
+    }
+    
+    .start-void2 {
+        grid-area: 20/2/24/12;
+        position: relative;
+    }
+    
+    .start-void2 > svg {
+        width: 10vw;
+        transform: scaleX(-1) rotate(-110deg);
+        position: absolute;
+        top: 11vw;
+        right: 5vw;
+        fill: #000;
+    }
+    
+    .start-void2 > p {
+        color: #000;
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 3.2vw;
+        font-weight: bold;
+        padding: 0;
+        position: absolute;
+        right: 9vw;
+        top: 12vw;
+        transform: rotate(-10deg);
+    }
+    
+    .jump-into-the-void {
+        grid-area: 20/11/25/16;
+        position: relative;
+    }
+    
+    .jumping-guy-top {
+        width: 8vw;
+        position: absolute;
+        left: 2vw;
+        top: 3vw;
+        fill: #000;
+    }
+    
+    .jumping-guy-bottom {
+        width: 8vw;
+        position: absolute;
+        right: 4vw;
+        bottom: -1vw;
+        fill: #000;
+    }
+    
+    .hole-top {
+        width: 12vw;
+        position: absolute;
+        top: 7vw;
+        left: 7vw;
+        fill: rgb(241, 79, 20);
+    }
+    
+    .hole-bottom {
+        width: 12vw;
+        position: absolute;
+        right: 3vw;
+        bottom: 5vw;
+        transform: rotate(180deg);
+        fill: rgb(64, 173, 240);
+    }
+    
+    /* DIVs with information about previous work places: */
+    
+    .workPlace {
+        background: #00509d;
+        overflow: hidden;
+        z-index: 3;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        font-size: 2.5vw;
+    }
+    
+    .spike-top-left {
+        display: none;
+    }
+    
+    .spike-top-right {
+        position: absolute;
+        width: 1.3vw;
+        right: 1.5vw;
+        top: 1.45vw;
+        fill: #ffd500;
+        transform: rotate(25deg);
+    }
+    
+    .spike-bottom-left {
+        display: none;
+    }
+    
+    .spike-bottom-right {
+        position: absolute;
+        width: 1.3vw;
+        bottom: 2.5vw;
+        right: 1.8vw;
+        fill: #ffd500;
+        transform: rotate(85deg);
+    }
+    
+    .svg_container > svg {
+        width: 10vw;
+        fill: #ffd500;
+        display: flex;
+        align-items: center;
+        margin: 1vw;
+    }
+
+    .svg_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .wp1 {
+        grid-area: 27/2/32/15;
+    }
+    
+    .wp2 {
+        grid-area: 33/2/38/15;
+    }
+    
+    .wp3 {
+        grid-area: 39/2/47/15;
+    }
+    
+    .wp4 {
+        grid-area: 48/2/60/15;
+    }
+    
+    .wp5 {
+        grid-area: 61/2/67/15;
+    }
+    
+    .wp6 {
+        grid-area: 68/2/73/15;
+    }
+    
+    /* Decorative DIVs, backgrounds for workPlace DIVs: */
+    
+    .Deco {
+        border-radius: 35%;
+        background: #00509d;
+        z-index: 2;
+    }
+    
+    .wp1Deco1 {
+        display: none;
+    }
+    
+    .wp2Deco2 {
+        display: none;
+    }
+    
+    .wp3Deco3 {
+        display: none;
+    }
+    
+    .wp4Deco4 {
+        display: none;
+    }
+    
+    .wp5Deco5 {
+        display: none;
+    }
+    
+    .wp5Deco6 {
+        display: none;
+    }
+    
+    .wp5Deco7 {
+        display: none;
+    }
+    
+    .wp6Deco8 {
+        display: none;
+    }
+    
+    /* DIV with the final stuff: */
+    
+    .finish {
+        grid-area: 75/10/80/16;
+        position: relative;
+    }
+    
+    .treasure-chest {
+        position: absolute;
+        width: 7vw;
+        fill: #000;
+        bottom: -2vw;
+        left: 1vw;
+    }
+    
+    .guy-waves {
+        position: absolute;
+        width: 7vw;
+        fill: #000;
+        left: 7vw;
+        bottom: -3.3vw;
+    }
+    
+    .bubble-end {
+        position: absolute;
+        width: 25vw;
+        fill: #000;
+        left: 10vw;
+        top: -2vw;
+        transform: rotate(20deg);
+    }
+    
+    .finish-1-paragraph {
+        color: #fff;
+        font-size: 4.5vw;
+        font-weight: bold;
+        transform: rotate(20deg);
+        position: absolute;
+        right: 2.5vw;
+        top: 0.2vw;
+    }
+    
+    .finish-2-paragraph {
+        color: #fff;
+        font-size: 2vw;
+        font-weight: bold;
+        transform: rotate(20deg);
+        position: absolute;
+        right: 4.5vw;
+        top: 8vw;
+    }
+    
+    /* Decorative DIVs, which represent lines: */
+    
+    .lineBox {
+        z-index: 1;
+    }
+    
+    .lb1 {
+        grid-area: 5/4/14/10;
+        border-top: #003f88 dashed 0.6vw;
+        border-right: #003f88 dashed 0.6vw;
+    }
+    
+    .lb2 {
+        grid-area: 20/3/21/11;
+        border-left: #003f88 dashed 0.6vw;
+        border-bottom: #003f88 dashed 0.6vw;
+    }
+    
+    .lb3 {
+        grid-area: 25/6/26/15;
+        border-right: #003f88 dashed 0.6vw;
+        border-bottom: #003f88 dashed 0.6vw;
+    }
+    
+    .lb4 {
+        grid-area: 26/6/80/10;
+        border-left: #003f88 dashed 0.6vw;
+        border-bottom: #003f88 dashed 0.6vw;
+    }
+    
+    .lb5 {
+        display: none;
+    }
+    
+    .lb6 {
+        display: none;
+    }
+    
+    .lb7 {
+        display: none;
+    }
+    
+    .lb8 {
+        display: none;
+    }
+    
+    .lb9 {
+        display: none;
+    }
+    
+    .lb10 {
+        display: none;
+    }
+    
+    .lb11 {
+        display: none;
+    }
+    
+    .lb12 {
+        display: none;
+    }
+    
+    /* Decorative DIVs with SVGs of animals, etc: */
+    
+    .black-and-white-pics1 {
+        display: none;
+    }
+    
+    .black-and-white-pics2 {
+        grid-area: 4/12/6/15;
+    }
+    
+    .black-and-white-pics3 {
+        grid-area: 76/2/79/3;
+    }
+    
+    .black-and-white-pics4 {
+        grid-area: 2/14/4/16;
+    }
+    
+    .skull {
+        width: 10vw;
+        transform: rotate(20deg);
+        fill: #003f88;
+    }
+    
+    .chameleon {
+        width: 9vw;
+        transform: rotate(-15deg) scaleX(-1);
+        fill: #003f88;
+    }
+    
+    .snake {
+        width: 9vw;
+        transform: rotate(90deg);
+        fill: #003f88;
+    }
+    
+    .palm {
+        width: 9vw;
+        transform: rotate(-10deg);
+        fill: #003f88; 
+    }
+
+    footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    footer > ul > li > a {
+        font-size: 1.5vw;
+        text-decoration: none;
+        color: #003f88;
+    }
+
+    footer > ul > li > a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-chameleon {
+        fill: #003f88;
+        width: 6vw;
+        position: absolute;
+        top: -2.5vw;
+        left: 0;
+    }
+
+    .footer-palm {
+        width: 7vw;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
 
-.black-and-white-pics2 {
-    grid-area: 26/14/28/16;
 }
 
-.black-and-white-pics3 {
-    grid-area: 33/2/35/3;
-}
-
-.black-and-white-pics4 {
-    grid-area: 38/14/40/16;
-}
-
-.skull {
-    width: 10vw;
-    transform: rotate(20deg);
-    fill: #003f88;
-}
-
-.chameleon {
-    width: 9vw;
-    transform: rotate(-15deg) scaleX(-1);
-    fill: #003f88;
-}
-
-.snake {
-    width: 9vw;
-    transform: rotate(90deg);
-    fill: #003f88;
-}
-
-.palm {
-    width: 9vw;
-    transform: rotate(-10deg);
-    fill: #003f88; 
-}
