@@ -95,3 +95,38 @@ console.log(listOfVehicles[2]);
 //
 //
 // 9 - Change the function vehicle to use the list of question 7. So that vehicle("green", 3, 1) prints "a green new bike":
+function vehicleNew(colorNew, carTypeNew, ageNew) {
+    if (typeof colorNew == "string" && carTypeNew == 1 && ageNew == 0) {
+        return 'a ' + colorNew + ' ' + 'new ' + listOfVehicles[0];
+    } else if (typeof colorNew == "string" && carTypeNew == 2 && ageNew == 0) {
+        return 'a ' + colorNew + ' ' + 'new ' + listOfVehicles[1];
+    } else if (typeof colorNew == "string" && carTypeNew == 3 && ageNew == 0) {
+        return 'a ' + colorNew + ' ' + 'new ' + listOfVehicles[2];                 
+        // new vehicles block ends here
+    } else if (typeof colorNew == "string" && carTypeNew == 1 && ageNew >= 1) {
+        return 'a ' + colorNew + ' ' + 'used ' + listOfVehicles[0];
+    } else if (typeof colorNew == "string" && carTypeNew == 2 && ageNew >= 1) {
+        return 'a ' + colorNew + ' ' + 'used ' + listOfVehicles[1];
+    } else if (typeof colorNew == "string" && carTypeNew == 3 && ageNew >= 1) {
+        return 'a ' + colorNew + ' ' + 'used ' + listOfVehicles[2];
+    } else {
+        return undefined;
+    }
+}
+
+console.log(vehicleNew('black', 3, 10));
+//
+//
+//
+// 10 - Use the list of vehicles to write an advertisement.
+// So that it prints something like: "Amazing Joe's Garage, we service cars, motorbikes, caravans and bikes.".
+// (Hint: use a for loop.)
+let text = 'Amazing Joe\'s Garage, we service cars, ';
+
+function vehicleLoop() {
+    for (let i = 0; i <= listOfVehicles.length; i++) {
+        return text + listOfVehicles[i] + 's, ';
+    }
+}
+
+console.log(vehicleLoop());
