@@ -123,10 +123,56 @@ console.log(vehicleNew('black', 3, 10));
 // (Hint: use a for loop.)
 let text = 'Amazing Joe\'s Garage, we service cars, ';
 
-function vehicleLoop() {
-    for (let i = 0; i <= listOfVehicles.length; i++) {
+function advert() {
+    for (let i = 0; i <= listOfVehicles.length; i++) { // THIS IS UNFINISHED!
         return text + listOfVehicles[i] + 's, ';
     }
 }
+console.log(advert());
+//
+//
+//
+// 12 - Create an empty object:
+let myObj = { }
+//
+//
+//
+// 13 - Create an object that contains the teachers that you have had so far for the different modules:
+let teachers = {
+    teacherOne: "Baraa",
+    teacherTwo: "Seif",
+    teacherThree: "Joseph"
+}
+//
+//
+//
+// 14 - Add a property to the object you just created that contains the languages that they have taught you:
+teachers.languages = ["HTML", "CSS", "Java Script"];
+console.log(teachers);
+//
+//
+//
+// 15 - Write some code to test two arrays for equality using == and ===. Test the following:
+let x = [1, 2, 3];
+let y = [1, 2, 3];
+let z = y;
 
-console.log(vehicleLoop());
+console.log(x == y); // returns FALSE
+console.log(x === y); // returns FALSE
+console.log(z == y); // returns TRUE
+console.log(z == x); // returns FALSE
+//
+//
+//
+// 16 - Take a look at the following code:
+// Show that changing o2 changes o3 (or not) (YES) and changing o1 changes o3(or not) (NO).
+// Does the order that you assign (o3 = o2 or o2 = o3) matter? (YES. o2 = o3 is UNDEFINED)
+let o1 = { foo: "bar" };
+let o2 = { foo: "bar" };
+let o3 = o2;
+//
+//
+//
+// 17 - What does the following code return? (And why?):
+let bar = 42;
+console.log(typeof typeof bar);
