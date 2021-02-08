@@ -13,7 +13,8 @@ console.log(threeArgumentsSum(argOne, argTwo, argThree));
 //
 // 2 - Create a function named colorCar that receives a color, and prints out, 'a red car' for example:
 function colorCar(AA) {
-    return 'a ' + AA + ' car';
+    // return 'a ' + AA + ' car';
+    return `a ${AA} car`;
 }
 
 let someColor = 'vermillion';
@@ -40,17 +41,20 @@ console.log(printEverything(someCoolObject));
 //
 // 4 - Create a function named vehicleType that receives a color, and a code, 1 for car, 2 for motorbike.
 // And prints 'a blue motorbike' for example when called as vehicleType("blue", 2):
-function vehicleType(BB, code1) {
-    if (typeof BB == "string" &&  code1 == 1) {
-        return 'a ' + BB + ' car'; 
-    } else if (typeof BB == "string" &&  code1 == 2) {
-        return 'a ' + BB + ' motorbike';
-    } else {
-        return undefined;
+function vehicleType (BB, code1) {
+    switch (code1) {
+        case 1:
+            console.log(`a ${BB} car`);
+            break;
+        case 2:
+            console.log(`a ${BB} motorbike`);
+            break;
+        default:
+            return undefined;
     }
 }
 
-console.log(vehicleType('red', 2));
+vehicleType('greeeeeeeeeeen', 2);
 //
 //
 //
@@ -60,27 +64,26 @@ console.log(vehicleType('red', 2));
 // } else {
 //   console.log("no");
 // }
-let hardToReadVar = (3 === 3) ? console.log('yes') : console.log('no');
+let hardToReadVar = 3 === 3 ? console.log('yes') : console.log('no');
 //
 //
 //
 // 6 - Create a function called vehicle, like before, but takes another parameter
 //called age, so that vehicle("blue", 1, 5) prints 'a blue used car':
-function vehicle(color, carType, age) {
-    if (typeof color == "string" && carType == 1 && age == 0) {
-        return 'a ' + color + ' new' + ' car';
-    } else if (typeof color == "string" && carType == 1 && age >= 1) {
-        return 'a ' + color + ' used' + ' car';
-    } else if (typeof color == "string" && carType == 2 && age == 0) {
-        return 'a ' + color + ' new' + ' motorbike';
-    } else if (typeof color == "string" && carType == 2 && age >= 1) {
-        return 'a ' + color + ' used' + ' motorbike';
-    } else {
-        return undefined;
+function vehicle (color, carType, age) {
+    let msg = '';
+    switch (carType) {
+        case 1:
+            age >= 1 ? msg = `a used ${color} car` : msg = `a new ${color} car`; 
+            break;
+        case 2:
+            age >= 1 ? msg = `a used ${color} motorbike` : msg = `a new ${color} motorbike`;
+            break;
     }
+    console.log(msg);
 }
 
-console.log(vehicle('yellow', 2, 0));
+vehicle('black\'n\'white', 1, 2);
 //
 //
 //
@@ -95,27 +98,13 @@ console.log(listOfVehicles[2]);
 //
 //
 // 9 - Change the function vehicle to use the list of question 7. So that vehicle("green", 3, 1) prints "a green new bike":
-function vehicleNew(colorNew, carTypeNew, ageNew) {
-    if (typeof colorNew == "string" && carTypeNew == 1 && ageNew == 0) {
-        return 'a ' + colorNew + ' ' + 'new ' + listOfVehicles[0];
-    } else if (typeof colorNew == "string" && carTypeNew == 2 && ageNew == 0) {
-        return 'a ' + colorNew + ' ' + 'new ' + listOfVehicles[1];
-    } else if (typeof colorNew == "string" && carTypeNew == 3 && ageNew == 0) {
-        return 'a ' + colorNew + ' ' + 'new ' + listOfVehicles[2];                 
-        // new vehicles block ends here
-    } else if (typeof colorNew == "string" && carTypeNew == 1 && ageNew >= 1) {
-        return 'a ' + colorNew + ' ' + 'used ' + listOfVehicles[0];
-    } else if (typeof colorNew == "string" && carTypeNew == 2 && ageNew >= 1) {
-        return 'a ' + colorNew + ' ' + 'used ' + listOfVehicles[1];
-    } else if (typeof colorNew == "string" && carTypeNew == 3 && ageNew >= 1) {
-        return 'a ' + colorNew + ' ' + 'used ' + listOfVehicles[2];
-    } else {
-        return undefined;
-    }
+function vehicleNew (colorNew, carTypeNew, ageNew) {
+    let msg = '';
+    ageNew >= 1 ? msg = `An used ${colorNew} ${listOfVehicles[carTypeNew -1]}` : `A new ${colorNew} ${listOfVehicles[carTypeNew -1]}`;
+    return console.log(msg);
 }
 
-console.log(vehicleNew('black', 3, 10));
-//
+vehicleNew('blaccccccccccccccck', 1, 2);
 //
 //
 // 10 - Use the list of vehicles to write an advertisement.
