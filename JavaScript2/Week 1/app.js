@@ -110,7 +110,9 @@ const BookCovers = {
 }
 
 // I'm creating three elements: div, ul and li, right?
+const body = document.getElementsByTagName('body');
 const container = document.createElement('div');
+body.appendChild(container);
 const ul = document.createElement('ul');
 const li = document.createElement('li');
 
@@ -129,7 +131,7 @@ for (let i = 0; i < bookTitles.length; i++) {
   }
 
   // I put li elements inside of ul:
-  ul.appendChild(li);
+  ul.appendChild(liTitle);
 }
 
 // I put ul element inside the div container:
