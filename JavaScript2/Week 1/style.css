@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Nanum+Pen+Script&family=Sacramento&family=Tangerine:wght@700&display=swap');
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: Tangerine, serif;
+    color: #fff;
+    font-size: 6vw;
+}
+
+#container {
+    border: 2px red dotted;
+    width: 60%;
+}
+
+ul {
+    list-style: none;
+    border: blue 2px solid;
+    font-family: 'comic sans MS';
+    color: #fff;
+}
