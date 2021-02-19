@@ -1,16 +1,16 @@
 'use strict';
 
 const bookTitles = [
-    'hyperion_dan_simmons', // 0 position in the array
-    'the_fall_of_hyperion_dan_simmons', //1
-    'endymion_dan_simmons', //2
-    'the_rise_of_endymion_dan_simmons', //3
-    'unsong_scott_alexander', //4
-    'the_almost_nearly_perfect_people_michael_booth', //5
-    'himmelstrand_john_ajvide_lindqvist', //6
-    'Rörelsen_john_ajvide_lindqvist', //7
-    'x_john_ajvide_lindqvist', //8
-    'un_lun_dun_china_miéville' //9
+    'hyperion_dan_simmons',
+    'the_fall_of_hyperion_dan_simmons',
+    'endymion_dan_simmons',
+    'the_rise_of_endymion_dan_simmons',
+    'unsong_scott_alexander',
+    'the_almost_nearly_perfect_people_michael_booth',
+    'himmelstrand_john_ajvide_lindqvist',
+    'Rörelsen_john_ajvide_lindqvist',
+    'x_john_ajvide_lindqvist',
+    'un_lun_dun_china_miéville'
   ];
 
 const Books = {
@@ -58,13 +58,13 @@ const Books = {
   },
 
   'Rörelsen_john_ajvide_lindqvist': {
-    title: 'Rörelsen',
+    title: 'Rörelsen. Den andra platsen',
     author: 'John Ajvide Lindqvist',
     language: 'Swedish'
   },
 
   'x_john_ajvide_lindqvist': {
-    title: 'X',
+    title: 'X. Den sista platsen',
     author: 'John Ajvide Lindqvist',
     language: 'Swedish'
   },
@@ -88,7 +88,7 @@ const BookCovers = {
     {cover: './img/endymion.jpg'},
 
   'the_rise_of_endymion_dan_simmons':
-    {cover: '/img/endymion_rise.jpg'},
+    {cover: './img/endymion_rise.jpg'},
 
   'unsong_scott_alexander':
     {cover: './img/unsong.jpg'},
@@ -109,18 +109,27 @@ const BookCovers = {
     {cover: './img/unlundun.jpg'}
 }
 
-// I'm creating three elements: div, ul and li, right?
-const body = document.getElementsByTagName('body');
+// Creating the DIV container and UL for all the books:
 const container = document.createElement('div');
-body.appendChild(container);
-const ul = document.createElement('ul');
-const li = document.createElement('li');
+container.setAttribute('class', 'container');
+document.body.appendChild(container);
 
-// I'm looping through ${bookTitles} and put its values into different li elements, I guess:
+const ul = document.createElement('ul');
+
+
+// looping through the array of books, creating elements,
+// assigning elements attributes:
 for (let i = 0; i < bookTitles.length; i++) {
-  const liTitle = document.createElement('li');
-  const liAuthor = document.createElement('li');
-  const liLanguage = document.createElement('li');
+  const li = document.createElement('li');
+
+  const liTitle = document.createElement('h2');
+  const liAuthor = document.createElement('p');
+  const liLanguage = document.createElement('p');
+  const liCover = document.createElement('img');
+
+  liTitle.setAttribute('class', 'book-title');
+  liAuthor.setAttribute('class', 'book-author');
+  liLanguage.setAttribute('class', 'book-language');
   
   let a = bookTitles[i];
 
@@ -130,37 +139,18 @@ for (let i = 0; i < bookTitles.length; i++) {
     liLanguage.innerHTML = Books[a].language;
   }
 
-  // I put li elements inside of ul:
-  ul.appendChild(liTitle);
+  if (BookCovers.hasOwnProperty(a)) {
+    liCover.src = BookCovers[a].cover;
+  }
+
+  // Putting elements inside of LI:
+  li.appendChild(liTitle);
+  li.appendChild(liAuthor);
+  li.appendChild(liLanguage);
+  li.appendChild(liCover);
+
+  ul.appendChild(li);
 }
 
-// I put ul element inside the div container:
+// Putting UL inside of the DIV container:
 container.appendChild(ul);
-
-// AND NOTHING IS WORKING :'-(
-
-
-
-
-
-
-// PREVIOUS CODE:
-
-// const cont = document.getElementById('container');
-
-// let ul = document.createElement('ul');
-  
-
-// for (let i = 0; i <= bookTitles.length; i++) {
-//   let li = document.createElement('li');
-
-//   let a = bookTitles[i];
-
-//   if (Books.hasOwnProperty(a)) {
-//     li.innerHTML = '"' + Books[a].title + '" by ' + Books[a].author + ' written in ' + Books[a].language;
-//   }
-
-//   ul.appendChild(li);	
-// }
-
-// cont.appendChild(ul);
