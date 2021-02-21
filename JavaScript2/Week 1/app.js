@@ -122,23 +122,28 @@ const ul = document.createElement('ul');
 for (let i = 0; i < bookTitles.length; i++) {
   const li = document.createElement('li');
 
+  // creating variables to store data:
   const liTitle = document.createElement('h2');
   const liAuthor = document.createElement('p');
   const liLanguage = document.createElement('p');
   const liCover = document.createElement('img');
 
+  // giving variables attributes for future CCSation:
+  // 'CCSation' is the new word, you welcome :)
   liTitle.setAttribute('class', 'book-title');
   liAuthor.setAttribute('class', 'book-author');
   liLanguage.setAttribute('class', 'book-language');
   
   let a = bookTitles[i];
 
+  // giving the book data to our variables:
   if (Books.hasOwnProperty(a)) {
     liTitle.innerHTML = Books[a].title;
     liAuthor.innerHTML = Books[a].author;
     liLanguage.innerHTML = Books[a].language;
   }
 
+  // and adding covers:
   if (BookCovers.hasOwnProperty(a)) {
     liCover.src = BookCovers[a].cover;
   }
@@ -149,6 +154,7 @@ for (let i = 0; i < bookTitles.length; i++) {
   li.appendChild(liLanguage);
   li.appendChild(liCover);
 
+  // Putting LI elements into UL:
   ul.appendChild(li);
 }
 
