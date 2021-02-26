@@ -99,11 +99,11 @@ const BookCovers = {
   'himmelstrand_john_ajvide_lindqvist':
     {cover: './img/himmelstrand.jpg'},
 
-  'Rörelsen_john_ajvide_lindqvist':
-    {cover: './img/rorelsen.jpg'},
-
   'x_john_ajvide_lindqvist':
     {cover: './img/x.jpg'},
+
+  'Rörelsen_john_ajvide_lindqvist':
+    {cover: './img/rorelsen.jpg'},
 
   'un_lun_dun_china_miéville':
     {cover: './img/unlundun.jpg'}
@@ -128,8 +128,8 @@ for (let i = 0; i < bookTitles.length; i++) {
   const liLanguage = document.createElement('p');
   const liCover = document.createElement('img');
 
-  // giving variables attributes for future CCSation:
-  // 'CCSation' is the new word, you welcome :)
+  // giving variables attributes for future CSSation:
+  // 'CSSation' is the new word, you welcome :)
   liTitle.setAttribute('class', 'book-title');
   liAuthor.setAttribute('class', 'book-author');
   liLanguage.setAttribute('class', 'book-language');
