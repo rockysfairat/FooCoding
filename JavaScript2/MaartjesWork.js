@@ -69,4 +69,6 @@ let totalAmount = 0;
 for (let i = 0; i < howMuchIsPayedByTask.length; i++) {
   totalAmount += eval(howMuchIsPayedByTask[i]);
 }
-console.log(`Total amount is ${totalAmount} euros.`);
+const formatedTotal = totalAmount.toLocaleString('en', {style: 'currency', currency: 'EUR'});
+
+console.log(formatedTotal);
