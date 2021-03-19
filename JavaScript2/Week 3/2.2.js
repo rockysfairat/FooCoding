@@ -6,18 +6,20 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
     }
     console.log(numbers);
 
-    for (let j = 0; j < numbers.length; j++) {
-        if (threeCallback % 3 == 0 && numbers[j] == threeCallback) {
-            sayThree();
+    numbers.forEach(item => {
+        if (item % 3 == 0 && item % 5 == 0) {
+            threeCallback(item);
+            fiveCallback(item);
+        } else if (item % 5 === 0) {
+            fiveCallback(item);
+        } else if (item % 3 == 0) {
+            threeCallback(item);
         }
-        if(fiveCallback % 5 == 0 && numbers[j] == fiveCallback) {
-            sayFive();
-        }
-    }
+    });
   }
 
-  const sayThree = () => 'One can divide a number by 3!';
-  const sayFive = () => 'One can divide a number by 5!';
+  let sayThree = (number) => `One can divide ${number} by 3!`;
+  let sayFive = (number) => `One can divide ${number} by 5!`;
   
   threeFive(10, 15, sayThree, sayFive);
   
